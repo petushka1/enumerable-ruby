@@ -4,7 +4,7 @@ module MyEnumerable
 
     def all?
         result = true
-        [1, 2, 3].each do |e|
+        @list.each do |e|
         check = yield e
             result = false unless check
             break
@@ -31,5 +31,3 @@ end
 
 list = MyList.new(1, 2, 3)
 list.all? { |e| e > 1 }
-
-
