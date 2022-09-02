@@ -15,19 +15,13 @@ class MyList
     def initialize (*number)
         @list = number
     end
-    include MyEnumerable
 
-    def #each
-        yield
-    end
-    @list.#each
-end
-
-
-
-
-class MiList
-    def initialize(*numbers)
-        @list = numbers
+    def test_class 
+        puts @list
     end
 end
+
+list = MyList.new(1, 2, 3)
+list.test_class()
+
+
