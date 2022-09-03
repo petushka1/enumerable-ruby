@@ -18,7 +18,7 @@ To get a copy of this project running on your local computer, do the followings:
 
 ### Setup
 - Install a text Editor. For example [_VS_](https://visualstudio.microsoft.com/)
-- Clone this project repository on your local computer. [link](https://github.com/Kamba56/Morse-Decode)
+- Clone this project repository on your local computer. [link](https://github.com/petushka1/enumerable-ruby.git)
 - Open the project directory with _Text Editor_
 
 ### Install
