@@ -1,33 +1,31 @@
 # module with Enumerable methods built and implemented
 
 module MyEnumerable
-
-    def all?
-        result = true
-        @list.each do |e|
-        check = yield e
-            result = false unless check
-            break
-        end
-        puts result
+  def all?
+    result = true
+    @list.each do |e|
+      check = yield e
+      result = false unless check
+      break
     end
+    puts result
+  end
 
+  def any?
+    result = false
+    @list.each do |e|
+      check = yield e
+      result = true if check
+    end
+    puts result
+  end
+
+  def filter
+    result = []
+    @list.each do |e|
+      check = yield e
+      result.push(e) if check
+    end
+    return result
+  end
 end
-
-# Class with instance variable impelmented
-
-class MyList
-include MyEnumerable
-
-    def initialize (*number)
-        @list = number
-    end
-
-    def each(&block)
-        yield( @list )
-        @list.all? &block
-    end
-end
-
-list = MyList.new(1, 2, 3)
-list.all? { |e| e > 1 }
