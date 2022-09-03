@@ -6,7 +6,6 @@ module MyEnumerable
     @list.each do |e|
       check = yield e
       result = false unless check
-      break
     end
     puts result
   end
@@ -26,6 +25,6 @@ module MyEnumerable
       check = yield e
       result.push(e) if check
     end
-    return result
+    puts result
   end
 end

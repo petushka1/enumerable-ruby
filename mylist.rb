@@ -1,4 +1,4 @@
-require 'enumerable_spec'
+require_relative 'enumerable_spec'
 # Class with instance variable impelmented
 
 class MyList
@@ -8,9 +8,8 @@ class MyList
     @list = number
   end
 
-  def each(&block)
+  def each
     yield(@list)
-    @list.all? &block
   end
 end
 
@@ -21,4 +20,4 @@ list.all? { |e| e > 5 }
 list.any? { |e| e == 2 }
 list.any? { |e| e == 5 }
 
-list.filter { |e| e.even? }
+# list.filter { |e| e.even? }
